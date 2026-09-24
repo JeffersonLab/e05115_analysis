@@ -1,0 +1,14 @@
+# Change this as needed
+OFFLINE=/work/hallc/hks/sanghwa/fortran/e05115/final/e05115_source_Tabun_Final/e05115src
+
+##
+INC=$(OFFLINE)/INCLUDE
+LIBROOT= $(OFFLINE)/LIB
+MAKEREG= $(OFFLINE)/makereg
+CERNINC= -I/cvmfs/oasis.opensciencegrid.org/jlab/scicomp/sw/el9/cernlib/2023/include/cfortran
+CERNLIB= /cvmfs/oasis.opensciencegrid.org/jlab/scicomp/sw/el9/cernlib/2023/lib
+
+##
+r_%.f : $(INC)/%.cmn
+	(cp $< . ; $(MAKEREG) $(<F) -o $@ -e /dev/null; rm -f $(<F))
+.PRECIOUS: r_%.f

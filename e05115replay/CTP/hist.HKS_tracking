@@ -1,0 +1,36 @@
+begin hist hks_tracking group=hks
+
+; filled by h_fill_dc_track_hist.f
+
+ntracksfp,100,0.,1000.      $HDC ntracks
+hntracksfpzoom,20,0.,20.     $HDC ntracks (zoom)
+
+hdcsingleresidual01,200,-0.5,0.5     $HDC single residual 1u1
+hdcsingleresidual02,200,-0.5,0.5     $HDC single residual 1u2
+hdcsingleresidual03,200,-0.5,0.5     $HDC single residual 1x1
+hdcsingleresidual04,200,-0.5,0.5     $HDC single residual 1x2
+hdcsingleresidual05,200,-0.5,0.5     $HDC single residual 1v1
+hdcsingleresidual06,200,-0.5,0.5     $HDC single residual 1v2
+hdcsingleresidual07,200,-0.5,0.5     $HDC single residual 2u1
+hdcsingleresidual08,200,-0.5,0.5     $HDC single residual 2u2
+hdcsingleresidual09,200,-0.5,0.5     $HDC single residual 2x1
+hdcsingleresidual10,200,-0.5,0.5     $HDC single residual 2x2
+hdcsingleresidual11,200,-0.5,0.5     $HDC single residual 2v1
+hdcsingleresidual12,200,-0.5,0.5     $HDC single residual 2v2
+
+hnfree_fp,20,0.,20.       $hnfree-fp t=user
+hchi2perdoffp,100,0.,500.       $HDC chi2 per dof fp
+hchi2perdoffpzoom,100,0.,20.    $HDC chi2 per dof fp (zoom)
+
+hxfp,200,-60.,60.               $HDC x fp
+hyfp,200,-20.,20.               $HDC y fp
+hxpfp,200,-.2,.2                $HDC xp fp
+hypfp,200,-0.05,0.05              $HDC yp fp
+hfpxy,200,-60.,60.,200,-30.,30.  $HDC x vs y at fp
+hfpxpyp,200,-.2,.2,200,-.05,.05    $HDC xp vs yp at fp
+hfpxxp,200,-60.,60.,200,-.2,.2    $HDC x vs xp at fp
+hfpyxp,200,-20.,20.,200,-.2,.2    $HDC y vs xp at fp
+hfpxyp,200,-60.,60.,200,-.05,.05    $HDC x vs yp at fp
+hfpyyp,200,-20.,20.,200,-.05,.05    $HDC y vs yp at fp
+
+end hist hks_tracking
